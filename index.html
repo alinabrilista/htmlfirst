@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      HomeWork1
+    </title>
+  </head>
+
+  <body>
+    <header></header>
+    <section></section>
+    <footer></footer>
+    <section>
+      <h1>Git</h1>
+      <h3>Основные команды</h3>
+    </section>
+    <section>
+      <h3>Навигация:</h3>
+      <p><a href="#init">Команда init</a></p>
+      <p><a href="#init dir">Команда init directory</a></p>
+      <p><a href="#add">Команда add</a></p>
+      <p><a href="#commit">Команда commit</a></p>
+      <p><a href="#branch">Команда branch</a></p>
+      <p><a href="#checkout">Команда checkout</a></p>
+      <p><a href="#merge">Команда merge</a></p>
+      <p><a href="#fetch">Команда fetch</a></p>
+      <p><a href="#pull">Команда pull</a></p>
+      <p><a href="#push">Команда push</a></p>
+      <a name="init"></a>
+      <p>
+        <b>$ git init</b> <br>
+        Создание нового репозитория <br>
+        Команда создаст новый репозиторий по текущему пути. Может быть
+        использована для инициализации git репозитория в уже существующем
+        проекте. <br>
+        <b> Создание репозитория в существующей директории </b> <br>
+        Если у вас уже есть проект в директории, которая не находится под версионным контролем Git, то для начала нужно перейти в эту директорию. Если вы не делали этого раньше, то для разных операционных систем это выглядит по-разному: <br>
+        <ul>
+        <li><b>для Linux</b>: $ cd /home/user/my_project </li>
+        <li><b>для macOS</b>: $ cd /Users/user/my_project </li>
+       <li><b>для Windows</b>:$ cd C:/Users/user/my_project </li>
+       </ul>
+        а затем выполните команду: <b>$ git init </b> <br>
+        Эта команда создаёт в текущей директории новую поддиректорию с именем .git, содержащую все необходимые файлы репозитория — структуру Git-репозитория. 
+      </p>
+      <img
+        src="1.jpg" alt="example">
+      <p>
+        <p>
+          Дополнительная информация по сылке:
+          <a href="https://git-scm.com/book/ru/v2/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git-%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-Git-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F" target="_self">git-scm.com</a>
+        </p>
+      <hr />
+      <p><a name="init dir"></a></p>
+      <p>
+        <b>$ git init (directory) </b> <br>
+        Создание нового	репозитория по	указанному	пути (в	указанной	папке) <br>
+        Команда создаст новый репозиторий в указанной папке. <br>
+       </p>
+      <hr />
+      <a name="add"></a>
+      <p>
+        <b>$ git add</b> <br>
+        Добавление файлов для отслеживания в git <br>
+        Команда	добавляет	файл(ы)	в	область	<b>staged</b>:<br> 
+        <ul>
+        <li><b>$ git add file.txt</b><br>Добавить	только	file.txt </li>
+        <li><b>$ git add folder</b><br>Добавить папку	folder и	все	содержимое	папки </li>
+       <li><b>$ git add –A</b><br>С флагом	–A добавит	все	файлы	в	область	staged </li>
+       <li><b>$ git add . </b><br> Более	сокращенный	аналог	команды	выше,	добавит	
+        все	файлы	по	текущему	пути	(.)</li>
+       </ul>
+       $ git commit –am “Comment” ->	Команда	git commit с	флагом	–a
+также	позволяет	добавить	все	отслеживаемыефайлы	в	область <b>staged</b>
+      </p>
+      <img
+        src="2.png" alt="example">
+      /<p>
+        <p>
+          Дополнительная информация по сылке:
+          <a href="https://git-scm.com/book/ru/v2/%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-Git-%D0%97%D0%B0%D0%BF%D0%B8%D1%81%D1%8C-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B9-%D0%B2-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B9" target="_self">git-scm.com</a>
+        </p>
+      <hr />
+      <a name="commit"></a>
+      <p>
+        <b>$ git commit</b> <br>
+        У	каждого	коммита есть	свое	описание(комментарий).	
+        Комментарий	описывает,	какие	изменения	в	проекте	вошли	в	
+        коммит(что	было	добавлено,	реализовано,	удалено	и	т.д.)
+        Для	добавления	комментария	используется	флаг	–m <br>
+        <b>$ git commit –m “Fixed bug with subscription form”</b><br>
+        Комментарий	должен	быть	абсолютно	у	каждого	коммита.<br> 
+      </p>
+      <img
+        src="5.jpg" alt="example">
+      <p>
+      <hr />
+ <a name="branch"></a>
+      <b>$ git branch</b> <br>
+        Работа с ветками <br>
+        <ul>
+        <li><b>$ git branch</b><br> Посмотреть	список	всех	веток	в	репозитории </li>
+        <li><b>$ git branch (branch-name)</b><br> Команда	создаст	новую	ветку	с	указанным	именем </li>
+       <li><b>$ git branch –d (branch-name)</b><br> Удалить	ветку</li>
+       <li><b>$ git branch –m (branch-name)</b> <br> Переименовать	текущую	ветку	на	указанное	имя</li>
+       </ul>
+      </p>
+      <img
+        src="3.png" alt="example">
+      <p>
+        <p>
+          Дополнительная информация по сылке:
+          <a href="https://git-scm.com/book/ru/v2/%D0%92%D0%B5%D1%82%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-Git-%D0%9E-%D0%B2%D0%B5%D1%82%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B8-%D0%B2-%D0%B4%D0%B2%D1%83%D1%85-%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%85" target="_self">git-scm.com</a>
+        </p>
+      <hr />
+      <a name="checkout"></a>
+      <b>$ git checkout</b> <br>
+        <ul>
+        <li><b>$ git checkout <branch-name></b><br> Перейти	на	ветку	с	указанным	именем</li>
+        <li><b>$ git checkout –b (branch-name)</b><br> Создать	ветку	с	указанным	именем	и	сразу	перейти	на	неё</li>
+       </ul>
+      </p>
+      <img
+        src="4.png" alt="example">
+ <hr />
+<a name="merge"></a>
+ <b>$ git merge</b> <br>
+   <p>$ git merge <branch-name>
+    Команда	объединяет	указанную	ветку	в	текущую. <br>
+    Например,	если	мы	находимся	на	ветке	master,	то	команда
+    <b>$ git merge hot-fix</b>
+    выполнит	слияние	ветки	hot-fix	в	ветку	master<br>
+    В	ветке	мастер	будут	применены	все	изменения	из	ветки	hot-fix,	а	ветка	hot-fix	
+    останется	не	тронутой.	Если	ветка	hot-fix больше	не	нужна,	то	её	можно	
+    удалить. <br>	<b>($ git branch –d hot-fix)</b></p>
+   <img
+   src="6.png" alt="example">
+<hr />
+<a name="fetch"></a>
+ <b>$ git fetch</b> <br>
+   <p><b>$ git fetch [remote-server-name]</b><br>
+    Команда	связывается	с	указанным	удалённым	репозиториеми	
+    забирает	все	изменения,	которых	ещё	нет,	но	не	сливает	их	с	
+    текущими	наработками	в	локальном	репозитории.<br>
+    Появляется	список	удаленных	веток,	которые	можно	объединить	с	
+    локальными	в	подходящий	момент.<br>
+    Используется,	когда	нужно	получить	все	новые	удаленные	
+    изменения,	но	не	объединять	их	с	текущими	наработками.</p>
+   <img
+   src="7.png" alt="example">
+<hr />
+<a name="pull"></a>
+ <b>$ git pull</b> <br>
+   <p><b>$ git pull [remote-server-name] [remote-branch-name]</b><br>
+    Команда	делает,	то	же,	что	и	<b>git fetch</b>, только	автоматически	
+    сливает	изменения	из	удаленной	ветки	в	текущую	ветку.<br>
+    Подходить	для	случаев	когда	вам	нужно	применить	все	удаленные	
+    изменения	в	вашу	текущую	работу.<br>
+    Эта	команда	последовательно	выполняет:<br>	
+     <b>$ git fetch -> $ git merge.</b>
+    </p>
+   <img
+   src="8.png" alt="example">
+<hr />
+<a name="push"></a>
+ <b>$ git push</b> <br>
+   <p><b>$ git push [remote-server-name] [remote-branch-name]</b><br>
+    Отправляет	локальные	изменения	в	удаленный	репозиторий.<br>
+    Нужно	обязательно	сделать	коммит перед	тем,	как	делать	пуш.
+    Так	как	локальные	коммиты отправляются	на	удаленный	сервер.
+    </p>
+<hr />
+      <h3>Тест</h3>
+     <ol><li>  Укажите правильный вариант написание команды:</li> 
+      </p>
+      <input type="radio" id="ch1" /> <label> <$ git init> </label><br>
+      <input type="radio" id="ch2" /> <label> $ git init </label><br>
+      <input type="radio" id="ch3" /> <label> "git init" </label><br>
+      <p>
+       <li> С помощью какой команды можно добавить все файлы в staged:</li>
+      </p>
+      <input type="radio" id="ch1" /> <label> $ git add </label><br>
+      <input type="radio" id="ch2" /> <label> $ git add .  </label><br>
+      <input type="radio" id="ch3" /> <label> $ git add all </label><br>
+      <p>
+        <li> Какую команду используют для перехода между ветками:</li>
+      </p>
+      <input type="radio" id="ch1" /> <label> $ git branch </label><br>
+      <input type="radio" id="ch2" /> <label> $ git commit </label><br>
+      <input type="radio" id="ch3" /> <label> $ git checkout </label><br> 
+      <p><li> Какая команда отправляет	локальные	изменения	в	удаленный	репозиторий</li>
+      </p>
+      <input type="radio" id="ch1" /> <label> $ git push </label><br>
+      <input type="radio" id="ch2" /> <label> $ git pull </label><br>
+      <input type="radio" id="ch3" /> <label> $ git add </label><br> 
+      <p><li> Команда $ git pull выполняет последовательно команды:</li>
+      </p>
+      <input type="radio" id="ch1" /> <label> $ git add + $ git commit</label><br>
+      <input type="radio" id="ch2" /> <label> $ git fetch + $ git merge</label><br>
+      <input type="radio" id="ch3" /> <label> $ git checkout + $ git branch</label><br>   
+      </ol>
+        <hr />
+        Укажите свой email для получения следующих уроков:
+        <form action="">
+          <input type="text" placeholder="email" />
+        </form>
+      </p>
+      <p>
+        Какие у Вас есть предложения, вопросы или замечания по теме GIT <br>
+        <textarea name="" id="" cols="10" rows="10" wrap="soft" maxlength "256"> </textarea>
+      </p>
+  </body>
+</html>
